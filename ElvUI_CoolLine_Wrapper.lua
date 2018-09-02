@@ -16,11 +16,11 @@ local IsAddOnLoaded = IsAddOnLoaded
 -- preparation of a more Generic version of this addon to create movers for "any" addon ... to be continued/confirmed
 local wrappedAddonName = "CoolLine"
 
-local wrappedAddons = {
-    "AddonName" = "FrameName"
-    -- todo: think of way to store list of frames and wrap them
-    "CoolLine" = "CoolLine"
-}
+--local wrappedAddons = {
+--    "AddonName" = "FrameName",
+--    -- todo: think of way to store list of frames and wrap them
+--    "CoolLine" = "CoolLine"
+--}
 
 -----------------------------------------
 local function MyLogger(methodName, text)
