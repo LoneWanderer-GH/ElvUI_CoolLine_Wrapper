@@ -1,6 +1,6 @@
-## Interface: 70200
+## Interface: 80000
 ## Author: Melurio
-## Version: 0.1
+## Version: 0.2
 ## Title: |cff1784d1ElvUI|r |cff00b3ffCoolLine Wrapper|r
 ## Notes: ElvUI CoolLine Wrapper allows various integration of CoolLine Addon (such as Mover ...).
 ## RequiredDeps: ElvUI, CoolLine
