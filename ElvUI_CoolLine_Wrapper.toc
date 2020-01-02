@@ -10,7 +10,7 @@
 
 ## LoadManagers: AddonLoader
 
-## X-Curse-Project-ID: 356973
+## X-Curse-Project-ID: 356978
 
 ## X-LoadOn-Always: delayed
 
