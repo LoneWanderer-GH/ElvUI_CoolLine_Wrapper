@@ -1,8 +1,17 @@
 ## Interface: 80000
-## Author: LoneWanderer-GH
-## Version: 0.2b
+## Version: @project-version@
+
 ## Title: |cff1784d1ElvUI|r |cff00b3ffCoolLine |cff00ffdaWrapper|r by LoneWanderer-GH
 ## Notes: ElvUI CoolLine Wrapper allows various integration of CoolLine Addon (such as Mover ...).
+
+## Author: LoneWanderer-GH
+
 ## RequiredDeps: ElvUI, CoolLine
+
+## LoadManagers: AddonLoader
+
+## X-Curse-Project-ID: 356973
+
+## X-LoadOn-Always: delayed
 
 ElvUI_CoolLine_Wrapper.lua
