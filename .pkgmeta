@@ -1,0 +1,6 @@
+package-as: ElvUI CoolLine Wrapper
+
+enable-nolib-creation: no
+
+required-dependencies:
+    - 
