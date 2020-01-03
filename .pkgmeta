@@ -3,4 +3,4 @@ package-as: ElvUI CoolLine Wrapper
 enable-nolib-creation: no
 
 required-dependencies:
-    - CoolLine (classic updated)
+    - coolline-classic-updated
