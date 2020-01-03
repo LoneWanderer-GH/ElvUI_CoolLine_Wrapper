@@ -29,7 +29,7 @@ jobs:
 
     - name: sudo set env
       shell: bash
-      run: sudo echo "CF_API_KEY=${CF_API_KEY}" > ./.env && ls --al
+      run: sudo echo "CF_API_KEY=${CF_API_KEY}" > ./.env && ls -al
       working-directory: ./.release
 
     - name: sudo set env
