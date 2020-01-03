@@ -17,3 +17,8 @@ jobs:
       run: pwd && ls -al && sudo bash ./release.sh -d -l
       shell: bash
       working-directory: ./.release
+    - name: Check build results
+      run: pwd && ls -al
+      working-directory: ./.release
+    - name: Check build results 2
+          run: pwd && ls -al
