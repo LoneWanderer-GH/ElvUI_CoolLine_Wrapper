@@ -247,8 +247,6 @@ elif [ -f ".env" ]; then
 	. ".env"
 fi
 
-echo "REMOVE ME, print CF API KEY: ${CF_API_KEY}"
-
 [ -z "$cf_token" ] && cf_token=$CF_API_KEY
 [ -z "$github_token" ] && github_token=$GITHUB_OAUTH
 [ -z "$wowi_token" ] && wowi_token=$WOWI_API_TOKEN
@@ -2072,17 +2070,17 @@ if [ -z "$skip_zipfile" ]; then
 	upload_curseforge=$( [[ -z "$skip_upload" && -z "$skip_cf_upload" && -n "$slug" && -n "$cf_token" && -n "$project_site" ]] && echo true )
 	upload_wowinterface=$( [[ -z "$skip_upload" && -n "$tag" && -n "$addonid" && -n "$wowi_token" ]] && echo true )
 	upload_github=$( [[ -z "$skip_upload" && -n "$tag" && -n "$project_github_slug" && -n "$github_token" ]] && echo true )
-	echo "*** ${skip_upload}"
-	echo "*** ${skip_cf_upload}"
-	echo "*** ${slug}"
-	set has_cf_token = $([[ -n "$cf_token" ]])
-	echo "*** ${has_cf_token}"
-	echo "*** ${project_site}"
-	echo "*** Upload curseforge variable: ${upload_curseforge}"
-	echo "*** "
-	echo "*** "
-	echo "*** "
-	echo "*** "
+	# echo "*** ${skip_upload}"
+	# echo "*** ${skip_cf_upload}"
+	# echo "*** ${slug}"
+	# set has_cf_token = $([[ -n "$cf_token" ]])
+	# echo "*** ${has_cf_token}"
+	# echo "*** ${project_site}"
+	# echo "*** Upload curseforge variable: ${upload_curseforge}"
+	# echo "*** "
+	# echo "*** "
+	# echo "*** "
+	# echo "*** "
 
 	if [[ -n "$upload_curseforge" || -n "$upload_wowinterface" || -n "$upload_github" ]] && ! jq --version &>/dev/null; then
 		echo "Skipping upload because \"jq\" was not found."
