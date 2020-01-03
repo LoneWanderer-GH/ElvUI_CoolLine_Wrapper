@@ -2072,6 +2072,8 @@ if [ -z "$skip_zipfile" ]; then
 	echo "*** ${skip_upload}"
 	echo "*** ${skip_cf_upload}"
 	echo "*** ${slug}"
+	set has_cf_token = $([[ -n "$cf_token" ]])
+	echo "*** ${has_cf_token}"
 	echo "*** ${project_site}"
 	echo "*** Upload curseforge variable: ${upload_curseforge}"
 	echo "*** "
