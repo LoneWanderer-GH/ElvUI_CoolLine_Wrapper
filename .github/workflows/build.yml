@@ -15,13 +15,13 @@ jobs:
     # - name: Change dir and list content
     #   run: pwd && ls -al
 
-    - name: Set env
-      run: echo "::set-env name=CF_API_KEY::${{ secrets.CF_API_KEY }}"
+    # - name: Set env
+    #   run: echo "::set-env name=CF_API_KEY::${{ secrets.CF_API_KEY }}"
 
-    - name: Build Retail
-      run: ./release.sh -l
-      # shell: bash
-      working-directory: ./.release
+    # - name: Build Retail
+    #   run: ./release.sh -l
+    #   # shell: bash
+    #   working-directory: ./.release
 
     - name: sudo set env
       run: sudo echo "::set-env name=CF_API_KEY::${{ secrets.CF_API_KEY }}"
