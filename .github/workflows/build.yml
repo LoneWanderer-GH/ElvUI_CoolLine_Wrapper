@@ -21,7 +21,7 @@ jobs:
       run: sudo echo "CF_API_KEY=${CF_API_KEY}" > ./.env && ls -al
       working-directory: ./.release
 
-    - name: sudo Build Retail
+    - name: Build Retail
       run: sudo bash ./release.sh -l
       shell: bash
       working-directory: ./.release
