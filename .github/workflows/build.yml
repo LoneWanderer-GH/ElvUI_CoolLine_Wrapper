@@ -7,6 +7,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+
     steps:
     - uses: actions/checkout@v1
     - name: List dir
@@ -14,11 +17,11 @@ jobs:
     - name: Change dir and list content
       run: pwd && ls -al
     - name: Build Retail
-      run: pwd && ls -al && sudo bash ./release.sh -d -l
+      run: pwd && ls -al && sudo bash ./release.sh -l
       shell: bash
       working-directory: ./.release
     - name: Build Classic
-      run: pwd && ls -al && sudo bash ./release.sh -d -l -g 1.13.3
+      run: pwd && ls -al && sudo bash ./release.sh -l -g 1.13.3
       shell: bash
       working-directory: ./.release
     - name: Check build results
