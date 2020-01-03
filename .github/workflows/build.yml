@@ -19,8 +19,12 @@ jobs:
       run: echo "" && echo "" && pwd && ls -al && sudo bash ./release.sh -l -g 1.13.3
       shell: bash
       working-directory: ./.release
+      env:
+        CF_API_KEY: ${{ secrets.CF_API_KEY }}
     - name: Check build results
       run: echo "" && echo "" && pwd && ls -al
       working-directory: ./.release
+      env:
+        CF_API_KEY: ${{ secrets.CF_API_KEY }}
     env:
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
