@@ -14,6 +14,6 @@ jobs:
     - name: Change dir and list content
       run: pwd && ls -al
     - name: Build Retail and Classic
-      run: pwd && ls -al && sudo bash ./release.sh -d -l -g
+      run: pwd && ls -al && sudo bash ./release.sh -d -l
       shell: bash
       working-directory: ./.release
