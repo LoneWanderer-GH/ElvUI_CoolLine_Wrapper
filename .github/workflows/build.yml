@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build Retail and Classic
-      run: .release/release.sh -d -l -g
+      run: sudo .release/release.sh -d -l -g
     # - name: Build Classic
     #   run: .release/release.sh -d -l -g
