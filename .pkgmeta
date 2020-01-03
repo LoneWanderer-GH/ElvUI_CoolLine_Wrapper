@@ -1,8 +1,7 @@
 required-dependencies:
     - coolline-classic-updated
 
-curse-slug:
-    - elvui-coolline-wrapper
+curse-slug: elvui-coolline-wrapper
 
 tools-used:
     - https://github.com/BigWigsMods/packager
