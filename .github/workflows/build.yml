@@ -27,6 +27,16 @@ jobs:
       shell: bash
       run: sudo echo "::set-env name=CF_API_KEY::${{ secrets.CF_API_KEY }}"
 
+    - name: sudo set env
+      shell: bash
+      run: sudo echo "CF_API_KEY=${CF_API_KEY}" > ./.env && ls --al
+      working-directory: ./.release
+
+    - name: sudo set env
+      shell: bash
+      run: sudo cat ./.env
+      working-directory: ./.release
+
     - name: sudo Build Retail
       run: sudo bash ./release.sh -l
       shell: bash
