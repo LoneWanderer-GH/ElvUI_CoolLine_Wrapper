@@ -11,7 +11,9 @@ jobs:
     - uses: actions/checkout@v1
     - name: List dir
       run: pwd && ls -al
+    - name: Change dir and list content
+      run: pwd && ls -al
     - name: Build Retail and Classic
-      run: cd ./.release && pwd && ls -al && sudo release.sh -d -l -g
-    # - name: Build Classic
-    #   run: .release/release.sh -d -l -g
+      run: pwd && ls -al && sudo release.sh -d -l -g
+      shell: bash
+      working-directory: ./.release
