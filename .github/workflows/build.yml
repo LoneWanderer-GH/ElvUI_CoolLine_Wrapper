@@ -13,8 +13,11 @@ jobs:
       run: pwd && ls -al
     - name: Change dir and list content
       run: pwd && ls -al
-    - name: Build Retail and Classic
+    - name: Build Retail
       run: pwd && ls -al && sudo bash ./release.sh -d -l
+      shell: bash
+    - name: Build Classic
+      run: pwd && ls -al && sudo bash ./release.sh -d -l -g 1.13.3
       shell: bash
       working-directory: ./.release
     - name: Check build results
