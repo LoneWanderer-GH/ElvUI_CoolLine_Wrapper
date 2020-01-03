@@ -16,6 +16,7 @@ jobs:
     - name: Build Retail
       run: pwd && ls -al && sudo bash ./release.sh -d -l
       shell: bash
+      working-directory: ./.release
     - name: Build Classic
       run: pwd && ls -al && sudo bash ./release.sh -d -l -g 1.13.3
       shell: bash
