@@ -4,12 +4,7 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    env:
-      CF_API_KEY: ${{ secrets.CF_API_KEY }}
-
     steps:
     - uses: actions/checkout@v1
     # - name: List dir
@@ -27,3 +22,5 @@ jobs:
     - name: Check build results
       run: echo "" && echo "" && pwd && ls -al
       working-directory: ./.release
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
