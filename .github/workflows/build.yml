@@ -6,27 +6,37 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
     - uses: actions/checkout@v1
+
     # - name: List dir
     #   run: echo "" && echo "" && pwd && ls -al
+
     # - name: Change dir and list content
     #   run: pwd && ls -al
+
     - name: Set env
       run: echo "::set-env name=CF_API_KEY::${{ secrets.CF_API_KEY }}"
+
     - name: Build Retail
-      run: echo "" && echo "" && pwd && ls -al && sudo bash ./release.sh -l
-      shell: bash
+      run: ./release.sh -l
+      # shell: bash
       working-directory: ./.release
-    - name: Build Classic
-      run: echo "" && echo "" && pwd && ls -al && sudo bash ./release.sh -l -g 1.13.3
-      shell: bash
+
+    - name: sudo set env
+      run: sudo echo "::set-env name=CF_API_KEY::${{ secrets.CF_API_KEY }}"
+
+      - name: sudo Build Retail
+      run: sudo ./release.sh -l
+      # shell: bash
       working-directory: ./.release
-      # env:
-      #   CF_API_KEY: ${{ secrets.CF_API_KEY }}
-    - name: Check build results
-      run: echo "" && echo "" && pwd && ls -al
-      working-directory: ./.release
-    #   env:
-    #     CF_API_KEY: ${{ secrets.CF_API_KEY }}
-    # env:
-    #   CF_API_KEY: ${{ secrets.CF_API_KEY }}
+
+    # - name: Build Classic
+    #   run: echo "" && echo "" && pwd && ls -al && sudo bash ./release.sh -l -g 1.13.3
+    #   shell: bash
+    #   working-directory: ./.release
+
+    # - name: Check build results
+    #   run: echo "" && echo "" && pwd && ls -al
+    #   working-directory: ./.release
+
