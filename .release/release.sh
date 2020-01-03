@@ -246,6 +246,10 @@ if [ -f "$topdir/.env" ]; then
 elif [ -f ".env" ]; then
 	. ".env"
 fi
+
+has_CF_API_KEY_env_set = $([ -z "$CF_API_KEY" ])
+echo "has_CF_API_KEY_env_set: ${has_CF_API_KEY_env_set}"
+
 [ -z "$cf_token" ] && cf_token=$CF_API_KEY
 [ -z "$github_token" ] && github_token=$GITHUB_OAUTH
 [ -z "$wowi_token" ] && wowi_token=$WOWI_API_TOKEN
