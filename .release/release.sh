@@ -247,8 +247,7 @@ elif [ -f ".env" ]; then
 	. ".env"
 fi
 
-set has_CF_API_KEY_env_set = $([ -z "$CF_API_KEY" ])
-echo "has_CF_API_KEY_env_set: ${has_CF_API_KEY_env_set}"
+echo "REMOVE ME, print CF API KEY: ${CF_API_KEY}"
 
 [ -z "$cf_token" ] && cf_token=$CF_API_KEY
 [ -z "$github_token" ] && github_token=$GITHUB_OAUTH
