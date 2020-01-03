@@ -247,7 +247,7 @@ elif [ -f ".env" ]; then
 	. ".env"
 fi
 
-has_CF_API_KEY_env_set = $([ -z "$CF_API_KEY" ])
+set has_CF_API_KEY_env_set = $([ -z "$CF_API_KEY" ])
 echo "has_CF_API_KEY_env_set: ${has_CF_API_KEY_env_set}"
 
 [ -z "$cf_token" ] && cf_token=$CF_API_KEY
