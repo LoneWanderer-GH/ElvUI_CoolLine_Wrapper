@@ -45,6 +45,17 @@ jobs:
       run: zipinfo "*.zip"
       working-directory: ./.release
 
+    # run release.sh without any arguments (default)
+    - uses: BigWigsMods/packager@master
+      name: Build Retail using BigWigsMods/packager@master WITH UPLOAD
+      with:
+        args: release.sh -l
+
+    - uses: BigWigsMods/packager@master
+      name: Build Classic using BigWigsMods/packager@master WITH UPLOAD
+      with:
+        args: release.sh -l -g 1.13.3
+
     env:
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
 
