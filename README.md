@@ -2,7 +2,6 @@
 [![](http://cf.way2muchnoise.eu/title/356978.svg)](https://www.curseforge.com/wow/addons/coolline-classic-updated)
 [![](http://cf.way2muchnoise.eu/versions/356978.svg)](https://www.curseforge.com/wow/addons/coolline-classic-updated)
 [![](http://cf.way2muchnoise.eu/full_356978_downloads.svg)](https://www.curseforge.com/wow/addons/coolline-classic-updated)
-
 ![](https://github.com/LoneWanderer-GH/CoolLine/workflows/Retail-Classic-Build/badge.svg)
 
 
@@ -16,7 +15,6 @@ Download [Curse page](https://www.curseforge.com/wow/addons/elvui-coolline-wrapp
 [![](http://cf.way2muchnoise.eu/title/356973.svg)](https://www.curseforge.com/wow/addons/coolline-classic-updated)
 [![](http://cf.way2muchnoise.eu/versions/356973.svg)](https://www.curseforge.com/wow/addons/coolline-classic-updated)
 [![](http://cf.way2muchnoise.eu/full_356973_downloads.svg)](https://www.curseforge.com/wow/addons/coolline-classic-updated)
-
 ![](https://github.com/LoneWanderer-GH/CoolLine/workflows/Retail-Classic-Build/badge.svg)
 
 [Github link](https://github.com/LoneWanderer-GH/CoolLine)
