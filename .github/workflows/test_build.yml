@@ -37,16 +37,12 @@ jobs:
 
     - name: Check created files
       shell: bash
-      run: ls -al
-
-    - name: Unzip all
-      shell: bash
-      run: unzip "*.zip"
+      run: ls -aRl
       working-directory: ./.release
 
-    - name: Recursive list unzipped files
+    - name: Get zip info
       shell: bash
-      run: ls -aRl
+      run: zipinfo "*.zip"
       working-directory: ./.release
 
     env:
