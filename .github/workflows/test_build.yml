@@ -35,6 +35,18 @@ jobs:
       with:
         args: release.sh -d -l -g 1.13.3
 
+    - name: Check created files
+      shell: bash
+      run: ls -al
+
+    - name: Unzip all
+      shell: bash
+      run: unzip "*.zip"
+
+    - name: Recursive list unzipped files
+      shell: bash
+      run: ls -aRl
+
     env:
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
 
