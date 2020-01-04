@@ -42,10 +42,12 @@ jobs:
     - name: Unzip all
       shell: bash
       run: unzip "*.zip"
+      working-directory: ./.release
 
     - name: Recursive list unzipped files
       shell: bash
       run: ls -aRl
+      working-directory: ./.release
 
     env:
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
