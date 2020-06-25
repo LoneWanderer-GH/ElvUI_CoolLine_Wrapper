@@ -15,7 +15,7 @@ P["ElvUI_CoolLine_Wrapper"] = {
     ["DebugMode"] = false,
 }
 
--- for debug
+-- for debug (yeah ugly)
 ------------------------------------------------
 function ElvUI_CoolLine_Wrapper:logger(message)
     ------------------------------------------------
@@ -23,15 +23,6 @@ function ElvUI_CoolLine_Wrapper:logger(message)
         print("|cff1784d1ElvUI|r |cff00b3ffCoolLine |cffff7d0aWrapper|r " .. message)
     end
 end
-
---------------------------------------------------
---function ElvUI_CoolLine_Wrapper:ADDON_LOADED(a1)
---------------------------------------------------
---    if a1 ~= dependancy then return end
---    --ElvUI_CoolLine_Wrapper:logger("ADDON_LOADED - CoolLine's 'ADDON_LOADED' intercepted")
---    --self:UnregisterEvent("ADDON_LOADED")
---    self.CreateMover()
---end
 
 ------------------------------------------------
 function ElvUI_CoolLine_Wrapper:PLAYER_ENTERING_WORLD()
@@ -43,7 +34,6 @@ end
 
 E:RegisterModule(ElvUI_CoolLine_Wrapper:GetName())
 
---ElvUI_CoolLine_Wrapper:RegisterEvent("ADDON_LOADED")
 ElvUI_CoolLine_Wrapper:RegisterEvent("PLAYER_ENTERING_WORLD")
 
 ----------------------------------------
@@ -233,15 +223,14 @@ function ElvUI_CoolLine_Wrapper:Initialize()
     --------------------------------------------
     ElvUI_CoolLine_Wrapper:logger('Initialize')
 
-    w, h, x, y, font, fontsize, inactivealpha, activealpha, statusbar = CoolLine:getConfig()
+    local w, h, x, y, font, fontsize, inactivealpha, activealpha, statusbar = CoolLine:getConfig()
     -- force CoolLine config if it exists
     ElvUI_CoolLine_Wrapper:logger("Updating ElvUI wrapper config data with CoolLine config data")
 
-    if E.db.ElvUI_CoolLine_Wrapper then
-        --
-    else
+    if not E.db.ElvUI_CoolLine_Wrapper then
         E.db.ElvUI_CoolLine_Wrapper = {}
     end
+
     E.db.ElvUI_CoolLine_Wrapper["fontConfig"] = {
         ["font"] = font,
         ["fontSize"] = fontsize,
