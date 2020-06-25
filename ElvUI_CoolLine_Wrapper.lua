@@ -44,7 +44,7 @@ function ElvUI_CoolLine_Wrapper:CreateMover()
             CoolLine.MainFrame:SetMovable(false)
             ElvUI_CoolLine_Wrapper:logger('Making CoolLine frame NOT movable (for ElvUI movers to work !)')
             E:CreateMover(CoolLine, MoverName, L[MoverName], nil, nil, nil, 'ALL,SOLO,ACTIONSBARS,PARTY,ARENA,RAID')
-            ElvUI_CoolLine_Wrapper:logger('CreateMover-Mover created !!!!!!!!!!!!!!')
+            --ElvUI_CoolLine_Wrapper:logger('CreateMover-Mover created !!!!!!!!!!!!!!')
         else
             -- find a way to postpone creation later ?
             ElvUI_CoolLine_Wrapper:logger('CreateMover- CoolLine frame not found/valid ... Find a way to postpone creation later ?')
