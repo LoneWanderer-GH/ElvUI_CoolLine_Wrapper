@@ -1,9 +1,6 @@
-#@retail@
-## Interface: 80000
-#@end-retail@
-#@non-retail@
-# ## Interface: 11303
-#@end-non-retail@
+## Interface: 11307
+## Interface-Retail: 90005
+## Interface-Classic: 11307
 ## Version: @project-version@
 
 ## Title: |cff1784d1ElvUI|r |cff00b3ffCoolLine |cff00ffdaWrapper|r by LoneWanderer-GH
