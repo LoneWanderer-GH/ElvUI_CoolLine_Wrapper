@@ -28,7 +28,7 @@ end
 function ElvUI_CoolLine_Wrapper:PLAYER_ENTERING_WORLD()
 ------------------------------------------------
     -- ElvUI_CoolLine_Wrapper:logger("PLAYER_ENTERING_WORLD")
-    self:UnregisterEvent("PLAYER_ENTERING_WORLD")
+    --self:UnregisterEvent("PLAYER_ENTERING_WORLD")
     self.CreateMover()
 end
 
@@ -42,9 +42,9 @@ function ElvUI_CoolLine_Wrapper:CreateMover()
     if not E.CreatedMovers[MoverName] then
         if CoolLine.MainFrame then
             CoolLine.MainFrame:SetMovable(false)
-            ElvUI_CoolLine_Wrapper:logger('Making CoolLine frame NOT movable (for ElvUI movers to work !)')
-            E:CreateMover(CoolLine, MoverName, L[MoverName], nil, nil, nil, 'ALL,SOLO,ACTIONSBARS,PARTY,ARENA,RAID')
-            --ElvUI_CoolLine_Wrapper:logger('CreateMover-Mover created !!!!!!!!!!!!!!')
+            --ElvUI_CoolLine_Wrapper:logger('Making CoolLine frame NOT movable (for ElvUI movers to work !)')
+            E:CreateMover(CoolLine.MainFrame, MoverName, L[MoverName], nil, nil, nil, 'ALL,SOLO,ACTIONSBARS,PARTY,ARENA,RAID')
+            ElvUI_CoolLine_Wrapper:logger('CreateMover-Mover created !')
         else
             -- find a way to postpone creation later ?
             ElvUI_CoolLine_Wrapper:logger('CreateMover- CoolLine frame not found/valid ... Find a way to postpone creation later ?')
@@ -248,6 +248,7 @@ function ElvUI_CoolLine_Wrapper:Initialize()
     EP:RegisterPlugin(addonName, ElvUI_CoolLine_Wrapper.InsertOptions)
 
     ElvUI_CoolLine_Wrapper:logger('Initialize-Call update')
+    --ElvUI_CoolLine_Wrapper:CreateMover()
     ElvUI_CoolLine_Wrapper:Update()
 end
 
